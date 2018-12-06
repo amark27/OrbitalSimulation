@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style/jquery-ui.min.css" rel="stylesheet" type="text/css">
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+	<title>Orbit Simulation</title>
+</head>
+
+<body>
+	<div id = "simulation">
+ 		<canvas id="myCanvas" width = "1800" height = "970"> Your browser does not support HTML5 canvas </canvas>
+ 		<div id = "destroyed"> </div>
+ 		<div id = "title">
+ 			<h1> Move the circles by clicking and dragging </h1>
+ 			<h1> If planet disappears, click reset to bring everything back </h1>
+ 			<h1> Can't change anything once path is formed, but turn path off to change variables </h1>
+ 		</div>
+ 		<input type="button" id = "play" class = "button" onclick = "move();" value="Play">
+ 		<input type = "button" id = "pause" class = "button" onclick = "stop();" value="Pause">
+ 		<input type = "button" id = "reset" class = "button" onclick = "reset();" value="Reset">
+ 		<div id = "menu">
+ 			<input name="Show Path" onclick="showPath($(this));" type="checkbox">
+ 			<h1> Path </h1>
+ 			</br>
+ 			<input name="Velocity Vector" class = "checkbox" onclick="velocityVector($(this));" type="checkbox">
+ 			<h1> Show Velocity Vector</h1>
+ 			</br>
+ 			<input name="Velocity Vector" class = "checkbox" onclick="gravityVector($(this));" type="checkbox">
+ 			<h1> Show Gravity Force Vector</h1>
+ 			</br>
+ 			</br>
+ 			<h1 id = "slideSunText"> Star Mass: 1x Original Mass </h1>
+ 			<div id = "slideSun"> </div>
+ 			<h1 id = "slideEarthText"> Planet Mass: 1x Original Mass </h1>
+ 			<div id = "slideEarth"> </div>
+ 		</div>
+ 	</div>
+
+ 	<script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
